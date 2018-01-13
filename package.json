@@ -1,0 +1,16 @@
+{
+   "name": "video-game-inventory",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/mykisscool/blackjack-php.git"
+   },
+   "description": "Blackjack PHP game. Refer to README for more details.",
+   "author": "Mike Petruniak <mike.petruniak@gmail.com>",
+   "license": "MIT",
+   "engines": {
+      "node": ">=8.1.2"
+   },
+   "dependencies": {
+      "bootstrap": "^3.3.7"
+   }
+}
