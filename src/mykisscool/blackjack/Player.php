@@ -34,6 +34,10 @@ class Player implements PlayerActions {
     */
    protected $totalWins;
 
+   /**
+    * Constructor
+    * @param string $type Player or dealer
+    */ 
    public function __construct(string $type = 'player')
    {
       $this->type = $type;
@@ -42,9 +46,9 @@ class Player implements PlayerActions {
       $this->totalWins = 0;
    }
 
-   public function hit()
+   public function hit(Card $cardForTesting = null)
    {
-      $pulledCard = Card::getTopCardFromDeck();
+      $pulledCard = $cardForTesting ?? Card::getTopCardFromDeck();
 
       $this->currentHand[] = $pulledCard;
       $this->currentScore += $pulledCard->getValueOfCard();
@@ -67,7 +71,10 @@ class Player implements PlayerActions {
       // @TODO Should I just a hand score if a player busts with an Ace in hand valued
       //     at an 11 (change the Ace from an 11 to a 1)?
 
-      $this->checkForPlayerBlackjack();
+      // Only check for Blackjack if this isn't a unit test
+      if (!$cardForTesting) {
+        $this->checkForPlayerBlackjack();
+      }
    }
 
    public function stand()

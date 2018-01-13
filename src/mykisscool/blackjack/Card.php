@@ -33,7 +33,12 @@ class Card {
     * @var string Unicode card symbol
     */
    protected $symbol;
-   
+
+   /**
+    * Constructor
+    * @param string $type Card suit
+    * @param string $Value Card rank
+    */   
    public function __construct(string $type, string $value)
    {
       if (! in_array($type, self::CARDTYPES)) {
@@ -49,6 +54,9 @@ class Card {
       $this->symbol = $this->pairTypeWithUnicode($type);
    }
 
+   /**
+    * @return string
+    */ 
    public function __toString()
    {
       return $this->value . ' ' . $this->symbol;

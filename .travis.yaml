@@ -10,7 +10,6 @@ sudo: false
 
 cache:
    directories:
-      - node_modules
       - vendor
 
 branches:
@@ -18,12 +17,12 @@ branches:
       - master
 
 notifications:
-   email: false
+   email: true
 
 install:
    - composer install --no-dev --quiet
 
-script: phpunit -c phpunit.xml --coverage-text
-
 before_script:
    - curl -sSf -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
+
+script: phpunit -c phpunit.xml --coverage-text
