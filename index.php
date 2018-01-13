@@ -1,5 +1,5 @@
 <?php
-require_once('actionController.php');
+require_once('src/actionController.php');
 ?>
 
 <!doctype html>
@@ -82,5 +82,6 @@ require_once('actionController.php');
             </div>
          </div>
       </div>
+   </div>
 </body>
 </html>

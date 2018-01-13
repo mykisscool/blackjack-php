@@ -6,10 +6,10 @@ This is a simple player vs computer Blackjack game.  It was created using **only
 
 ## Roadmap
 
-1. Allow betting
-2. Implement split and double-up features.
-3. Allow the user to decide if an Ace should be valued at a 1 or an 11.  Right now, the hand score is calculated (after-the-fact) to maximize hand value and avoid a bust.
-4. Find a better way to handle running out of cards in the middle of a hand.
+1. Find a better way to handle running out of cards in the middle of a hand.
+2. Allow the user to decide if an Ace should be valued at a 1 or an 11.  Right now, the hand score is calculated automatically to maximize hand value and avoid a bust.
+3. Implement split and double-up features.
+4. Implement betting.
 5. Take over Las Vegas.
 
 ## License
