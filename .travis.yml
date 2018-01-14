@@ -7,10 +7,6 @@ php:
 
 sudo: false
 
-cache:
-   directories:
-      - vendor
-
 branches:
    only:
       - master
@@ -19,6 +15,6 @@ notifications:
    email: true
 
 install:
-   - composer install --quiet
+   - composer install --no-dev --quiet
 
 script: phpunit -c phpunit.xml --coverage-text
