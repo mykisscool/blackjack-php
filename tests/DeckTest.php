@@ -1,7 +1,5 @@
 <?php
 
-require_once(dirname(__DIR__) . '/src/mykisscool/Blackjack/Card.php');
-
 use mykisscool\Blackjack\Card;
 
 class DeckTest extends PHPUnit\Framework\TestCase {
