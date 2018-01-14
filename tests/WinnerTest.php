@@ -1,5 +1,9 @@
 <?php
 
+require_once(dirname(__DIR__) . '/src/mykisscool/Blackjack/Card.php');
+require_once(dirname(__DIR__) . '/src/mykisscool/Blackjack/Player.php');
+require_once(dirname(__DIR__) . '/src/mykisscool/Blackjack/Game.php');
+
 use mykisscool\Blackjack\Card;
 use mykisscool\Blackjack\Player;
 use mykisscool\Blackjack\Game;

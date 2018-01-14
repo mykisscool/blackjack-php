@@ -7,6 +7,10 @@ php:
 
 sudo: false
 
+cache:
+   directories:
+      - vendor
+
 branches:
    only:
       - master
