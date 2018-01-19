@@ -1,24 +1,17 @@
 language: php
-
 php:
-   - 7.0
-   - 7.1
-   - nightly
-
+- 7.0
+- 7.1
+- nightly
 sudo: false
-
 cache:
-   directories:
-      - vendor
-
+  directories:
+  - vendor
 branches:
-   only:
-      - master
-
+  only:
+  - master
 notifications:
-   email: true
-
+  email: true
 install:
-   - composer install --no-dev --quiet
-
+- composer install --no-dev --quiet
 script: phpunit -c phpunit.xml --coverage-text
