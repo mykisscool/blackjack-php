@@ -40,6 +40,10 @@ class Player implements PlayerActions {
     */ 
    public function __construct(string $type = 'player')
    {
+      if ($type !== 'player' && $type !== 'dealer') {
+         throw new \Exception('Invalid player type.');
+      }
+
       $this->type = $type;
       $this->currentHand = [];
       $this->currentScore = 0;

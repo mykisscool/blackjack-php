@@ -7,12 +7,10 @@ use mykisscool\Blackjack\Game;
 class WinnerTest extends PHPUnit\Framework\TestCase {
 
    private $player;
-   private $dealer;
 
    public function setUp()
    {
       $this->player = new Player;
-      $this->dealer = new Player('dealer');
    }
 
    public function testPlayerBlackjack1()
@@ -20,8 +18,39 @@ class WinnerTest extends PHPUnit\Framework\TestCase {
       $this->player->hit(new Card('heart', 'Ace'));
       $this->player->hit(new Card('club', '10'));
 
-      $this->assertEquals(Game::BLACKJACK, $this->player->getCurrentScore());
+      $this->assertSame(Game::BLACKJACK, $this->player->getCurrentScore());
    }
 
-   // @TODO
+   public function testPlayerBlackjack2()
+   {
+      $this->player->hit(new Card('heart', 'Ace'));
+      $this->player->hit(new Card('club', '4'));
+      $this->player->hit(new Card('spade', 'Ace'));
+      $this->player->hit(new Card('diamond', '2'));
+      $this->player->hit(new Card('heart', '2'));
+      $this->player->hit(new Card('club', 'Ace'));
+
+      $this->assertSame(Game::BLACKJACK, $this->player->getCurrentScore());
+   }
+
+   public function testPlayerBlackjack3()
+   {
+      $this->player->hit(new Card('heart', '9'));
+      $this->player->hit(new Card('club', '4'));
+      $this->player->hit(new Card('spade', 'Ace'));
+      $this->player->hit(new Card('diamond', '7'));
+
+      $this->assertSame(Game::BLACKJACK, $this->player->getCurrentScore());
+   }
+
+   public function testPlayerTotalScore()
+   {
+      $this->player->win();
+      $this->player->win();
+      $this->player->win();
+      $this->player->win();
+      $this->player->win();
+
+      $this->assertSame(5, $this->player->getTotalWins());
+   }
 }
