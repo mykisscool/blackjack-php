@@ -15,7 +15,7 @@ require_once('src/actionController.php');
 <body>
    <div class="container">
       <div class="row">
-         <div class="col-xs-12">
+         <div class="col-12">
             <h1>Blackjack-php</h1>
             <?php if (isset($_SESSION['flash'])) : ?>
             <div class="alert alert-<?php echo $_SESSION['flash']['type']; ?>">
@@ -25,12 +25,12 @@ require_once('src/actionController.php');
          </div>
       </div>
       <div id="table" class="row">
-         <div class="cards col-xs-12 col-sm-6">
+         <div class="cards col-sm-12 col-md-6">
             <div class="cards box">
                Player: <?php echo $playerHand; ?>
             </div>
          </div>
-         <div class="cards col-xs-12 col-sm-6">
+         <div class="cards col-sm-12 col-md-6">
             <div class="cards box">
                Dealer: <?php echo $dealerHand; ?>
             </div>
@@ -38,19 +38,19 @@ require_once('src/actionController.php');
       </div>
 
       <div id="buttons" class="row">
-         <div class="col-xs-12 col-sm-4">
+         <div class="col-12 col-sm-4">
          <?php if (isset($_SESSION['activeGame']) && $activeHand) : ?>
-            <a class="btn btn-default" href="?action=hit">Hit</a>
+            <a class="btn btn-warning" href="?action=hit">Hit</a>
          <?php endif; ?>
          </div>
-         <div class="col-xs-12 col-sm-4">
+         <div class="col-12 col-sm-4">
          <?php if (isset($_SESSION['activeGame']) && $activeHand) : ?>
-            <a class="btn btn-default" href="?action=stand">Stand</a>
+            <a class="btn btn-warning" href="?action=stand">Stand</a>
          <?php else : ?>
             <a class="btn btn-primary" href="?action=new">New Game</a>
          <?php endif; ?>
          </div>
-         <div class="col-xs-12 col-sm-4">
+         <div class="col-12 col-sm-4">
          <?php if (isset($_SESSION['activeGame']) && !$activeHand) : ?>
             <a class="btn btn-danger" href="?action=end">End Game</a>   
          <?php endif; ?>
@@ -58,7 +58,7 @@ require_once('src/actionController.php');
       </div>
 
       <div id="score-board" class="row">
-         <div class="col-xs-12">
+         <div class="col-12">
             <div class="table-responsive">
                <table class="table table-striped">
                   <thead>

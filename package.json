@@ -1,5 +1,5 @@
 {
-   "name": "video-game-inventory",
+   "name": "blackjack-php",
    "repository": {
       "type": "git",
       "url": "https://github.com/mykisscool/blackjack-php.git"
@@ -11,6 +11,6 @@
       "node": ">=8.1.2"
    },
    "dependencies": {
-      "bootstrap": "^3.3.7"
+      "bootstrap": "^4.1.3"
    }
 }
