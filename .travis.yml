@@ -12,5 +12,5 @@ branches:
 notifications:
   email: true
 before_script:
-- composer install --no-dev --quiet
+- composer install
 script: phpunit -c phpunit.xml --coverage-text
