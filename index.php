@@ -10,6 +10,13 @@ require_once('src/actionController.php');
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/public/css/style.css" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142383298-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-142383298-1');
+</script>
 </head>
 
 <body>
@@ -52,7 +59,7 @@ require_once('src/actionController.php');
          </div>
          <div class="col-12 col-sm-4">
          <?php if (isset($_SESSION['activeGame']) && !$activeHand) : ?>
-            <a class="btn btn-danger" href="?action=end">End Game</a>   
+            <a class="btn btn-danger" href="?action=end">End Game</a>
          <?php endif; ?>
          </div>
       </div>
