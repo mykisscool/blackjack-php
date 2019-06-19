@@ -13,4 +13,4 @@ notifications:
   email: true
 install:
 - composer install --no-dev --quiet
-script: phpunit -c phpunit.xml --coverage-text
+#script: phpunit -c phpunit.xml --coverage-text
