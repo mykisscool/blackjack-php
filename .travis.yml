@@ -11,6 +11,6 @@ branches:
   - master
 notifications:
   email: true
-install:
-- composer install --quiet
-script: phpunit -c phpunit.xml
+before_script:
+- composer install
+script: vendor/bin/phpunit -c phpunit.xml
