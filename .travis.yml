@@ -5,7 +5,7 @@ php:
 sudo: false
 cache:
   directories:
-  - vendor
+  #- vendor
 branches:
   only:
   - master
