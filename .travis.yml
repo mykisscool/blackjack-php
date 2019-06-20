@@ -12,5 +12,5 @@ branches:
 notifications:
   email: true
 install:
-- composer install --no-dev --quiet
+- composer install --quiet
 script: phpunit -c phpunit.xml
